@@ -4,6 +4,7 @@ using namespace std;
 
 //funciones
 int binario(int);
+bool malvado(int);
 
 int main(){
  bool salir=false;
@@ -21,16 +22,26 @@ int main(){
     do{
     cout<<"Ingrese el numero: "<<endl;
     cin>>num;
-    cout<<"b: "<<binario(num)<<endl;
-    /*if (n<0){
-     
-    }*/
-    
+    if (num<0){
+     cout<<"Ingrese un numero mayor que 0"<<endl;
+    }
+    cout<<"Los numeros malvados son: "<<endl;
+    int bin;//binario de un numero
+    for (int i=0;i<=num;i++){
+     bin= binario(i);//pasa a binario el numero
+     if (malvado(bin)){//verifica si el numero es malvado
+      if(i==0){
+      cout<<0;
+      }else{
+       cout<<", "<<i;
+      }
+     }
+    }
+    cout<<endl;
     }while(num<0);
     break;
    }
    case 2:{
-    cout<<"entro"<<endl;
    break;
    }
    case 3:{
@@ -54,9 +65,25 @@ int binario(int num){
   num= num/2;
   bin= bin + tmp * pow(10, cont);
   cont +=1;
-
+  
  }//fin while
  return bin;
 }//fin funcion binario
+
+//funcion si es malvado
+bool malvado(int n){
+ int b=0,suma=0;
+ while(n!=0) {
+  b=n%10;
+  n=n/10;
+ //return b;
+  suma+=b;
+ }
+ if (suma%2!=0){
+  return false;
+ }else{
+  return true;
+ }
+}
 
 
