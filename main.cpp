@@ -44,6 +44,7 @@ int main(){
     break;
    }
    case 2:{
+
    break;
    }
    case 3:{
@@ -91,6 +92,16 @@ bool malvado(int n){
 //crear matriz
 int** crearMatriz(int n){
  int** retVal=new int*[n];
- for 
+ for(int i=0;i<n;i++)
+  retVal[i]=new int[n];
+
+return retVal;
 }//fin crear matriz
 
+//liberar memoria
+void liberarMatriz(int n, int** matriz){
+ for(int i=0;i<n;i++)
+  delete[] matriz[i];
+
+ delete[] matriz;
+}//termina liberar
