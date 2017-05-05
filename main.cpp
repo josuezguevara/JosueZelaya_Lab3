@@ -33,9 +33,11 @@ int main(){
       bin= binario(i);//pasa a binario el numero
       if (malvado(bin)){//verifica si el numero es malvado
        if(i==0){
-       cout<<0;
+       cout<<bin;
+       cout<<"--"<<0<<endl;
        }else{
-        cout<<", "<<i;
+       cout<<bin;
+        cout<<"--"<<i<<endl;
        }
       }
      }
@@ -44,8 +46,14 @@ int main(){
     break;
    }
    case 2:{
-   
-   break;
+    int** matriz;
+    matriz=crearMatriz(5);
+    cout<<"Matriz" <<endl;
+   // imprimir(5,matriz,0,0);
+   // cout<<(*(matriz+4)+4);
+    cout<<"Matriz rotada"<<endl;
+   // liberar(5, matriz);
+    break;
    }
    case 3:{
     salir=true;
