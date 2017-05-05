@@ -20,24 +20,24 @@ int main(){
    case 1:{
     int num;
     do{
-    cout<<"Ingrese el numero: "<<endl;
-    cin>>num;
-    if (num<0){
-     cout<<"Ingrese un numero mayor que 0"<<endl;
-    }
-    cout<<"Los numeros malvados son: "<<endl;
-    int bin;//binario de un numero
-    for (int i=0;i<=num;i++){
-     bin= binario(i);//pasa a binario el numero
-     if (malvado(bin)){//verifica si el numero es malvado
-      if(i==0){
-      cout<<0;
-      }else{
-       cout<<", "<<i;
+     cout<<"Ingrese el numero: "<<endl;
+     cin>>num;
+     if (num<0){
+      cout<<"Ingrese un numero mayor que 0"<<endl;
+     }
+     cout<<"Los numeros malvados son: "<<endl;
+     int bin;//binario de un numero
+     for (int i=0;i<=num;i++){
+      bin= binario(i);//pasa a binario el numero
+      if (malvado(bin)){//verifica si el numero es malvado
+       if(i==0){
+       cout<<0;
+       }else{
+        cout<<", "<<i;
+       }
       }
      }
-    }
-    cout<<endl;
+     cout<<endl;
     }while(num<0);
     break;
    }
