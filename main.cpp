@@ -5,6 +5,8 @@ using namespace std;
 //funciones
 int binario(int);
 bool malvado(int);
+int** crearMatriz(int);
+void liberarMatriz(int, int**);
 
 int main(){
  bool salir=false;
@@ -86,4 +88,9 @@ bool malvado(int n){
  }
 }
 
+//crear matriz
+int** crearMatriz(int n){
+ int** retVal=new int*[n];
+ for 
+}//fin crear matriz
 
