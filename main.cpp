@@ -9,7 +9,7 @@ bool malvado(int);
 int main(){
  bool salir=false;
  while( !salir){
-  cout<<"Menu"<<endl;
+  cout<<"--------Menu---------"<<endl;
   cout<<"1. Ejercicio 1"<<endl
   <<"2. Ejercicio 2"<<endl<<
   "3. Salir"<<endl;
