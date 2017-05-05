@@ -7,6 +7,7 @@ int binario(int);
 bool malvado(int);
 int** crearMatriz(int);
 void liberarMatriz(int, int**);
+void printmatriz (int, int**,int,int);
 
 int main(){
  bool salir=false;
@@ -49,10 +50,9 @@ int main(){
     int** matriz;
     matriz=crearMatriz(5);
     cout<<"Matriz" <<endl;
-   // imprimir(5,matriz,0,0);
-   // cout<<(*(matriz+4)+4);
-    cout<<"Matriz rotada"<<endl;
-   // liberar(5, matriz);
+    printmatriz(5,matriz,0,0);
+    
+    liberarMatriz(5, matriz);
     break;
    }
    case 3:{
@@ -118,3 +118,17 @@ void liberarMatriz(int n, int** matriz){
 
  delete[] matriz;
 }//termina liberar
+
+//imprimir matriz
+void printmatriz(int n, int** matriz, int x, int y){
+ if (x<n){
+  if (y<n){
+   cout<<matriz[x][y]<<" ";
+   printmatriz(n,matriz,x,y+1);
+   }else{
+   cout<<endl;
+   printmatriz(n,matriz,x+1,0);
+   }
+  }
+}
+
